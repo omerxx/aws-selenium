@@ -37,7 +37,6 @@ def get_instance_ips(idlist):
         ec2response = ec2client.describe_instances(InstanceIds=[instanceid])
         instanceIpList.append(ec2response["Reservations"][0]["Instances"][0]["PrivateIpAddress"])
 
-    print "the ip list length is {0}".format(len(instanceIpList))
     return instanceIpList
 
 
